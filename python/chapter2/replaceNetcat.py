@@ -118,8 +118,8 @@ def client_sender(buffer):
     except:
         print "[*] Exception! Exiting."
 
-    # 关闭连接
-    client.close()
+        # 关闭连接
+        client.close()
 
 
 def server_loop():
